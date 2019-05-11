@@ -1,29 +1,34 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Sidebar() {
   return (
     <div>
       <span>Menu</span>
       <ul className="list-group custom-menu">
-        <li className="list-group-item rounded-item grow-rotate">
-          Identity Generator
-        </li>
+        <Link to="/indetity" className="list-group-item rounded-item grow-rotate">
+            Identity Generator
+        </Link>
 
-        <li className="list-group-item rounded-item grow-rotate">
+        <Link to="/1" className="list-group-item rounded-item grow-rotate">
           Address Generator
-        </li>
-        <li className="list-group-item rounded-item grow-rotate">
+        </Link>
+
+        <Link to="/2" className="list-group-item rounded-item grow-rotate">
           Numbers Generator
-        </li>
-        <li className="list-group-item rounded-item grow-rotate">
+       </Link>
+
+        <Link to="/3" className="list-group-item rounded-item grow-rotate">
           Image Generator
-          </li>
-        <li className="list-group-item rounded-item grow-rotate">
+         </Link>
+
+        <Link to="/4" className="list-group-item rounded-item grow-rotate">
           Text Generator
-          </li>
-        <li className="list-group-item rounded-item grow-rotate">
+         </Link>
+         
+        <Link to="/5" className="list-group-item rounded-item grow-rotate">
           Internet
-          </li>
+         </Link>
 
       </ul>
     </div>

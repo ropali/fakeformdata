@@ -1,19 +1,19 @@
 import React, { Component } from "react";
-import "./vendors/styles/style.css";
-import './vendors/styles/hover.css'
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
-import Sidebar from "./components/layouts/sidebar";
+import "./vendors/styles/style.css";
+import "./vendors/styles/hover.css";
+
 import NavBar from "./components/layouts/NavBar";
-import Container from './components/Container'
+import Container from "./components/Container";
 
 class App extends Component {
   render() {
     return (
-      <React.Fragment>
+      <Router>
         <NavBar />
-
-        <Container/>
-      </React.Fragment>
+        <Container />
+      </Router>
     );
   }
 }
