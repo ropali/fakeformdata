@@ -3,7 +3,7 @@ import Sidebar from './layouts/sidebar'
 
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
-import IdentityGenerator from './IdentityGenerator'
+import IdentityGenerator from './pages/IdentityGenerator'
 import Home from './Home'
 
 
@@ -17,7 +17,7 @@ export default function Container() {
                     </div>
                     <div className="col-md-9">
                         <Route exact path="/" component={Home} />
-                        <Route exact path="/indetity" component={IdentityGenerator} />
+                        <Route exact path="/identity" component={IdentityGenerator} />
 
                     </div>
                 </div>

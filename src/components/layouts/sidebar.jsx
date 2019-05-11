@@ -6,7 +6,7 @@ export default function Sidebar() {
     <div>
       <span>Menu</span>
       <ul className="list-group custom-menu">
-        <Link to="/indetity" className="list-group-item rounded-item grow-rotate">
+        <Link to="/identity" className="list-group-item rounded-item grow-rotate">
             Identity Generator
         </Link>
 
