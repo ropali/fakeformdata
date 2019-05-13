@@ -10,23 +10,23 @@ export default function Sidebar() {
             Identity Generator
         </Link>
 
-        <Link to="/1" className="list-group-item rounded-item grow-rotate">
+        <Link to="/address" className="list-group-item rounded-item grow-rotate">
           Address Generator
         </Link>
 
-        <Link to="/2" className="list-group-item rounded-item grow-rotate">
+        <Link to="/numbers" className="list-group-item rounded-item grow-rotate">
           Numbers Generator
        </Link>
 
-        <Link to="/3" className="list-group-item rounded-item grow-rotate">
+        <Link to="/images" className="list-group-item rounded-item grow-rotate">
           Image Generator
          </Link>
 
-        <Link to="/4" className="list-group-item rounded-item grow-rotate">
+        <Link to="/text" className="list-group-item rounded-item grow-rotate">
           Text Generator
          </Link>
          
-        <Link to="/5" className="list-group-item rounded-item grow-rotate">
+        <Link to="/internet" className="list-group-item rounded-item grow-rotate">
           Internet
          </Link>
 
