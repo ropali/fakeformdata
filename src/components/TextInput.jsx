@@ -18,7 +18,7 @@ export default function TextInput(props) {
                         <i className="fa fa-clipboard" aria-hidden="true"></i>
                     </Clipboard> &nbsp;
 
-                    <select className="form-control" name={name} id={name}>
+                    <select onChange={ props.onParaChange } className="form-control" name={name} id={name}>
                         <option value="5">5 paragraphs</option>
                         <option value="10">10 paragraphs</option>
                         <option value="20">20 paragraphs</option>
@@ -32,7 +32,7 @@ export default function TextInput(props) {
 
                 <div className="row mt-2">
                     <div className="col">
-                        <textarea name="" id="" cols="101" rows="8" value={value}></textarea>
+                        <textarea onChange={ () => {} } name="" id="" cols="101" rows="8" value={value}></textarea>
                     </div>
 
                 </div>
