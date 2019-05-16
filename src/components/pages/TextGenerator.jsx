@@ -39,7 +39,7 @@ export default class TextGenerator extends Component {
             <React.Fragment>
                 <PageHeader
                     title="Generate Fake Text"
-                    subtitle="Generate fake plain text, HTML text etc..."
+                    subtitle="Generate fake lorem ipsum text, real like text etc..."
                     onRefreash={this.refreshData}
                     onParaChange={ this.onChangeHandler }
                 />

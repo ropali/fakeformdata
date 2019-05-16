@@ -1,7 +1,7 @@
 import React from 'react'
 import Sidebar from './layouts/sidebar'
 
-import { Route } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 
 import Home from './pages/Home'
 import IdentityGenerator from './pages/IdentityGenerator'
@@ -10,28 +10,34 @@ import NumbersGenerator from './pages/NumbersGenerator'
 import ImageGenerator from './pages/ImageGenerator'
 import TextGenerator from './pages/TextGenerator'
 import InternetGenerator from './pages/InternetGenerator'
+import About from './pages/About'
+import Disclaimer from './pages/Disclaimer'
 
 export default function Container() {
     return (
-        
-            <div className="container-fluid" style={{ marginTop: "6rem" }}>
-                <div className="row">
-                    <div className="col-md-3">
-                        <Sidebar />
-                    </div>
-                    <div className="col-md-9">
+
+        <div className="container-fluid" style={{ marginTop: "6rem" }}>
+            <div className="row">
+                <div className="col-md-3">
+                    <Sidebar />
+                </div>
+                <div className="col-md-9">
+                    <Switch>
+
                         <Route exact path="/" component={Home} />
+                        <Route exact path="/about" component={About} />
+                        <Route exact path="/disclaimer" component={Disclaimer} />
                         <Route exact path="/identity" component={IdentityGenerator} />
                         <Route exact path="/address" component={AddressGenerator} />
                         <Route exact path="/numbers" component={NumbersGenerator} />
                         <Route exact path="/images" component={ImageGenerator} />
                         <Route exact path="/text" component={TextGenerator} />
                         <Route exact path="/internet" component={InternetGenerator} />
-
-                    </div>
+                    </Switch>
                 </div>
             </div>
-        
+        </div>
+
 
     )
 }

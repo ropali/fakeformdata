@@ -36,13 +36,13 @@ export default function NavBar() {
 
                         <div className="user-notification ">
                             <div className="dropdown">
-                                <a href="">Disclaimer</a>
+                            <Link to="/disclaimer">Disclaimer</Link>
                             </div>
                         </div>
 
                         <div className="user-notification ">
                             <div className="dropdown">
-                                <a href="">About</a>
+                            <Link to="/about">About</Link>
                             </div>
                         </div>
 

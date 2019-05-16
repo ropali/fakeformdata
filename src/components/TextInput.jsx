@@ -19,11 +19,11 @@ export default function TextInput(props) {
                     </Clipboard> &nbsp;
 
                     <select onChange={ props.onParaChange } className="form-control" name={name} id={name}>
-                        <option value="5">5 paragraphs</option>
-                        <option value="10">10 paragraphs</option>
-                        <option value="20">20 paragraphs</option>
-                        <option value="30">30 paragraphs</option>
-                        <option value="50">50 paragraphs</option>
+                        <option value="5">5 sentences</option>
+                        <option value="10">10 sentences</option>
+                        <option value="20">20 sentences</option>
+                        <option value="30">30 sentences</option>
+                        <option value="50">50 sentences</option>
                     </select>
 
 
