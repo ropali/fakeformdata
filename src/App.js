@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { HashRouter as Router } from "react-router-dom";
 
 import "./vendors/styles/style.css";
 import "./vendors/styles/hover.css";

@@ -30,7 +30,7 @@ export default function NavBar() {
 
                         <div className="user-notification ">
                             <div className="dropdown">
-                                <a href="">GitHub</a>
+                                <a href="https://github.com/ropali/fakeformdata" rel="noopener noreferrer" target="_blank">GitHub</a>
                             </div>
                         </div>
 
