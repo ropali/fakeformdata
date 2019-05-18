@@ -231,7 +231,7 @@ function getFakeValues() {
             jobTitle: faker.name.title(),
             jobDesc: faker.name.jobDescriptor(),
             jobArea: faker.name.jobArea(),
-            company: faker.company.companyName(0) + ' ' + faker.company.companySuffix()
+            company: faker.company.companyName(0)
         }
     }
 }

@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://ropali.github.io/fakeformdata/",
   "dependencies": {
+    "creditcard-generator": "^0.0.7",
     "faker": "^4.1.0",
     "gh-pages": "^2.0.1",
     "jeffsum": "^1.0.0",

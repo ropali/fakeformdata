@@ -15,7 +15,7 @@ export default function Input(props) {
                 <input type="text" value={value} onChange={ ()=>{} } className="form-control" placeholder={placeholder} name={name} id="" />
                 <div className="input-group-btn">
                     <Clipboard data-tip="Copied!!" data-clipboard-text={value} className="btn btn-default">
-                        <i className="fa fa-clipboard" aria-hidden="true"></i>
+                        <i className="fa fa-clone" aria-hidden="true"></i>
                     </Clipboard>
 
                 </div>
