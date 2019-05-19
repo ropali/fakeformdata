@@ -7,12 +7,14 @@ import CreditCardGenerator from 'creditcard-generator'
 export default class NumbersGenerator extends Component {
 
     state = {
-        ...getFakeValues()
+        digits:10,
+        numberOfDigits: getNumberOfDigits( ),
+        values: getFakeValues()
     }
 
     refreshData = () => {
 
-        this.setState( { ...getFakeValues() } )
+        this.setState( { numberOfDigits: getNumberOfDigits( this.state.digits ) , values: getFakeValues() } )
 
     }
 
@@ -20,14 +22,23 @@ export default class NumbersGenerator extends Component {
         var index = e.nativeEvent.target.selectedIndex;
         const type = e.nativeEvent.target[index].text;
 
-        this.setState({ ...getFakeValues() })
+        this.setState( { values: getFakeValues(type) } )
     }
+
+    onChange = e => {
+        
+        this.setState({ [e.target.name]: e.target.value });
+
+        this.setState({ numberOfDigits: getNumberOfDigits( this.state.digits ) })
+    }
+        
 
     
 
     render() {
 
-        const { number, cvv, expiryDate } = this.state.card
+        const { number, cvv, expiryDate } = this.state.values.card
+        const { digits, numberOfDigits } = this.state
 
         return (
 
@@ -85,37 +96,28 @@ export default class NumbersGenerator extends Component {
                     </div>
                 </div>
 
-                {/* <div className="card mt-3 box-shadow">
+                <div className="card mt-3 box-shadow">
                     <div className="card-body">
                         <h5 className="card-title">Random Numbers Of Digits</h5>
                         <div className="row">
                             <div className="col">
-
                                 <Input
                                     name="credit-card"
-                                    value={number}
-                                    placeholder="Creadit Card"
+                                    value={numberOfDigits}
+                                    placeholder="Number Of Digits"
                                     label="Numbers"
                                 />
-
-
                             </div>
 
                             <div className="col">
                                 <label className="mr-2">Enter Number Of Digits</label>
                                 <div className="input-group add-on">
-                                    <input type="number" value={ this.state.digitInput } onChange={ (e) => this.onNumberChange(e.tartget.value)  } className="form-control" placeholder="Enter Number Of Digits" name="digits" id="" />
-                                    
+                                    <input type="number" value={ digits } onChange={ this.onChange } className="form-control" placeholder="Enter Number Of Digits" name="digits" id="" />  
                                 </div>
-
-
                             </div>
                         </div>
-
-
-
                     </div>
-                </div> */}
+                </div>
 
             </React.Fragment>
 
@@ -159,3 +161,15 @@ function getFakeExpiryDate() {
 
     return output;
 }
+
+function getNumberOfDigits(length = 10) {
+    const numbersArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+    let constrcutedArray = [];
+
+    for (let i = 0; i < length ; i++ ) {
+        constrcutedArray.push( numbersArray[ Math.floor(Math.random() * numbersArray.length) ] )
+    }
+
+    return constrcutedArray.join("");
+}
+

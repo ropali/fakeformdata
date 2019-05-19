@@ -30,6 +30,10 @@ export default function Sidebar() {
           Internet
          </Link>
 
+         <Link to="/pattern" className="list-group-item rounded-item grow-rotate">
+          Pattern Generator
+         </Link>
+
       </ul>
     </div>
 
