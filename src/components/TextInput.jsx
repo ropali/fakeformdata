@@ -15,7 +15,7 @@ export default function TextInput(props) {
 
                 <div className="float-right" style={{ display: 'flex' }}>
                     <Clipboard data-tip="Copied!!" data-clipboard-text={value} className="btn btn-default">
-                        <i className="fa fa-clipboard" aria-hidden="true"></i>
+                        <i className="fa fa-clone" aria-hidden="true"></i>
                     </Clipboard> &nbsp;
 
                     <select onChange={ props.onParaChange } className="form-control" name={name} id={name}>

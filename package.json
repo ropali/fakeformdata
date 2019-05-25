@@ -2,7 +2,7 @@
   "name": "fakeformdata",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ropali.github.io/fakeformdata/",
+  "homepage": "https://newcodingera.com/fakeformdata/",
   "dependencies": {
     "creditcard-generator": "^0.0.7",
     "faker": "^4.1.0",

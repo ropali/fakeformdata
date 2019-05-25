@@ -6,7 +6,7 @@ export default function About() {
             <div className="card-body">
                 <h2 className="card-title">About FakeFormData</h2>
 
-                <p>Struggling to find multiple user profiles for program testing? Don't want to use your real personal information on social network and need fake profile? Generate Fake Name Tool will provide you all personal info you need: names, phone numbers, credit card, social numbers, etc and it's completely FREE ! ALWAYS!</p>
+                <p>Struggling to find multiple user profiles for program testing? Don't want to use your real personal information on social network and need fake profile? FakeFormData Tool will provide you all personal info you need: names, phone numbers, credit card, social numbers, etc and it's completely FREE ! ALWAYS!</p>
 
                 <h2 className="card-title">Why FakeFormData?</h2>
                 <p>
