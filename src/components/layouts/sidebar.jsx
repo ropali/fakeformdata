@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 export default function Sidebar() {
   return (
-    <div>
+    <div className="topnav">
       <span>Menu</span>
       <ul className="list-group custom-menu">
         <Link to="/identity" className="list-group-item rounded-item grow-rotate">

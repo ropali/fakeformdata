@@ -27105,6 +27105,7 @@ textarea.form-control {
   animation: bouncing 0.4s 0.2s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
 }
 
+
 @keyframes bouncing {
   0% {
     transform: translate3d(0, 10px, 0) scale(1.2, 0.85);
@@ -27115,12 +27116,22 @@ textarea.form-control {
 }
 
 
+.icon {
+  display: none;
+}
+
 /* MEDIA QUERIES */
 
 @media only screen and (max-width: 600px) {
  .custom-menu{
    margin-bottom: 10px;
  }
+
+ .topnav > a:not(:first-child) {display: none;}
+  .topnav .icon {
+    float: right;
+    display: block;
+  }
 }
 
 @media only screen and (max-width: 700px) {

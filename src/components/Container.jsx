@@ -2,6 +2,7 @@ import React from 'react'
 import Sidebar from './layouts/sidebar'
 
 import { Route, Switch } from 'react-router-dom'
+import NavBar from "./layouts/NavBar";
 
 import Home from './pages/Home'
 import IdentityGenerator from './pages/IdentityGenerator'
@@ -21,8 +22,9 @@ export default function Container() {
     return (
 
         <div className="container-fluid" style={{ marginTop: "6rem" }}>
+            <NavBar />
             <div className="row">
-                <div className="col-md-3">
+                <div className="col-md-3 col-xs-12">
                     <Sidebar />
                 </div>
                 <div className="col-md-9">
