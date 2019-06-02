@@ -27113,3 +27113,18 @@ textarea.form-control {
     transform: translate3d(0, -20px, 0) scale(0.9, 1.1);
   }
 }
+
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 600px) {
+ .custom-menu{
+   margin-bottom: 10px;
+ }
+}
+
+@media only screen and (max-width: 700px) {
+  .custom-menu{
+    margin-bottom: 10px;
+  }
+ }

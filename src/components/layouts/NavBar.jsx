@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 export default function NavBar() {
     return (
         <div>
-            <div className="header clearfix">
+            <div className="header clearfix my-navbar">
                 <div className="header-right">
                     <div className="brand-logo">
                         <a href="index.php">
@@ -12,12 +12,7 @@ export default function NavBar() {
 
                         </a>
                     </div>
-                    <div className="menu-icon">
-                        <span />
-                        <span />
-                        <span />
-                        <span />
-                    </div>
+                    
                     <div>
 
                         <div className="user-notification float-left mouse-pointer" style={style.menu}>

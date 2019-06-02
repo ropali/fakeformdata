@@ -11,8 +11,11 @@ import ImageGenerator from './pages/ImageGenerator'
 import TextGenerator from './pages/TextGenerator'
 import InternetGenerator from './pages/InternetGenerator'
 import PatternGenerator from './pages/PatternGenerator'
+
 import About from './pages/About'
 import Disclaimer from './pages/Disclaimer'
+import Footer from './layouts/Footer'
+
 
 export default function Container() {
     return (
@@ -35,9 +38,13 @@ export default function Container() {
                         <Route exact path="/text" component={TextGenerator} />
                         <Route exact path="/internet" component={InternetGenerator} />
                         <Route exact path="/pattern" component={PatternGenerator} />
+                        
                     </Switch>
+
+                    <Footer />
                 </div>
             </div>
+            
         </div>
 
 
