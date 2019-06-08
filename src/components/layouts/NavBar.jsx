@@ -40,7 +40,7 @@ export default function NavBar() {
                 </div>
 
                 <div className="user-notification icon">
-                    <i class="fa fa-bars"></i>
+                    <i className="fa fa-bars"></i>
                 </div>
 
 
