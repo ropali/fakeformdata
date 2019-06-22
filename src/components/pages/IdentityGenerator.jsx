@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import faker from 'faker'
 import Input from '../Input'
+
 import PageHeader from '../layouts/PageHeader'
 
 class IdentityGenerator extends Component {
@@ -9,13 +10,21 @@ class IdentityGenerator extends Component {
         values: getFakeValues()
     }
 
-   
+
     refreshData = () => {
         this.setState({ values: getFakeValues() })
-
     }
 
+    onChange = (e) => {
+        var value = e.nativeEvent.target.value;
 
+        faker.locale = value
+
+        // Forcefully change the state to reflect the locale
+        this.setState({ values: getFakeValues() })
+    }
+
+    
     render() {
         const {
             firstName,
@@ -30,24 +39,34 @@ class IdentityGenerator extends Component {
             phone
         } = this.state.values
 
-        const { jobTitle,jobDesc, jobArea, company  } = this.state.values.jobs
+        const { jobTitle, jobDesc, jobArea, company } = this.state.values.jobs
 
         return (
             <React.Fragment>
 
-                <PageHeader 
-                title="Generate Fake Identities"
-                subtitle="Generate fake name, email, address etc..."
-                onRefreash={ this.refreshData }
+                <PageHeader
+                    title="Generate Fake Identities"
+                    subtitle="Generate fake name, email, address etc..."
+                    onRefreash={this.refreshData}
                 />
 
                 <div className="card mt-3 box-shadow">
                     <div className="card-body">
-                        <h5 className="card-title" style={styles.header}>Basic Identites</h5>
-
                         <div className="row">
                             <div className="col">
+                                <h5 className="card-title" style={styles.header}>Basic Identites</h5>
+                            </div>
+                            <div className="col">
+                               
+                                <select onChange={ this.onChange } className="form-control" style={ styles.localSelect }>
+                                    { getCountriesOption().map(opt => opt) }
+                                </select>
+                            </div>
 
+                        </div>
+
+                        <div className="row" >
+                            <div className="col">
 
                                 <Input
                                     name="firstName"
@@ -94,7 +113,7 @@ class IdentityGenerator extends Component {
                                     placeholder="Phone Number"
                                     label="Phone Number"
                                 />
-                                
+
                             </div>
 
                         </div>
@@ -149,11 +168,7 @@ class IdentityGenerator extends Component {
                                     placeholder="Job Area"
                                     label="Job Area"
                                 />
-
-
                             </div>
-
-
                         </div>
 
                     </div>
@@ -178,8 +193,6 @@ class IdentityGenerator extends Component {
                                     placeholder="password"
                                     label="Password"
                                 />
-
-
                             </div>
 
                             <div className="col">
@@ -198,10 +211,7 @@ class IdentityGenerator extends Component {
                                     label="User Agent"
                                 />
 
-
                             </div>
-
-
                         </div>
 
                     </div>
@@ -289,14 +299,105 @@ function getFakePhoneNumber(format = 4) {
 }
 
 
+function getCountriesOption() {
+    
+    let options = [];
+    const countries = JSON.parse( JSON.stringify(getLocales()) )
+    for (const code in countries ) {
+        options.push( <option key={code} value={code} selected={ code === 'en' ? 'en' : '' } >{ countries[code] }</option> )
+    }
+    
+    return options
+}
+
+
+const getLocales = () => {
+    return {
+    
+        "az": "Azerbaijani",
+       
+        "cz": "Czech (Czech Republic)",
+        
+        "nl": "Dutch",
+        
+        "en_AU": "English (Australia)",
+       
+        "en_IN": "English (India)",
+        "en_IE": "English (Ireland)",
+        
+        "en_NZ": "English (New Zealand)",
+      
+        "en_CA": "English (Canada)",
+    
+        "en_GB": "English (United Kingdom)",
+        "en_US": "English (United States)",
+        "en_ZW": "English (Zimbabwe)",
+        "en": "English",
+        "en_IND": "English (India)",
+       
+        "fr_CA": "French (Canada)",
+        
+        "fr": "French",
+       
+        "de_AT": "German (Austria)",
+       
+        "de_CH": "German (Switzerland)",
+        "de": "German",
+        
+        "id_ID": "Indonesian (Indonesia)",
+      
+        "it": "Italian",
+        
+        "ja": "Japanese",
+        
+        "ko": "Korean",
+       
+        "nep": "Nepali",
+        
+        "nb_NO": "Norwegian Bokmål (Norway)",
+      
+        "fa_AF": "Persian (Afghanistan)",
+        "fa_IR": "Persian (Iran)",
+        "fa": "Persian",
+       
+        "pl": "Polish",
+        
+        "pt_BR": "Portuguese (Brazil)",
+      
+        "ru": "Russian",
+        
+        "sr": "Serbian",
+       
+        "sk": "Slovak",
+        
+        "es_MX": "Spanish (Mexico)",
+       
+        "es": "Spanish",
+        
+        "sv": "Swedish",
+      
+        "tr": "Turkish",
+        
+        "uk": "Ukrainian",
+        "vi": "Vietnamese"
+        
+    }
+}
+
 const styles = {
     header: {
         display: 'inline-block'
     },
     btnGrp: {
         float: 'right'
+    },
+    localSelect: {
+        width: '70%',
+        float: 'right'
     }
 }
+
+
 
 
 export default IdentityGenerator
