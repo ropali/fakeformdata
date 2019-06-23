@@ -322,16 +322,14 @@ const getLocales = () => {
         
         "en_AU": "English (Australia)",
        
-        "en_IN": "English (India)",
+        "en_IND": "English (India)",
         "en_IE": "English (Ireland)",
-        
-        "en_NZ": "English (New Zealand)",
-      
+    
         "en_CA": "English (Canada)",
     
         "en_GB": "English (United Kingdom)",
         "en_US": "English (United States)",
-        "en_ZW": "English (Zimbabwe)",
+       
         "en": "English",
         "en_IND": "English (India)",
        
@@ -348,26 +346,14 @@ const getLocales = () => {
       
         "it": "Italian",
         
-        "ja": "Japanese",
-        
-        "ko": "Korean",
-       
         "nep": "Nepali",
         
         "nb_NO": "Norwegian Bokmål (Norway)",
-      
-        "fa_AF": "Persian (Afghanistan)",
-        "fa_IR": "Persian (Iran)",
-        "fa": "Persian",
-       
+    
         "pl": "Polish",
         
         "pt_BR": "Portuguese (Brazil)",
       
-        "ru": "Russian",
-        
-        "sr": "Serbian",
-       
         "sk": "Slovak",
         
         "es_MX": "Spanish (Mexico)",
