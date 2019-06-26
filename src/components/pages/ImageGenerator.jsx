@@ -43,7 +43,7 @@ export default class ImageGenerator extends Component {
 
                 <div className="card mt-3 box-shadow">
                     <div className="card-body">
-                        <h5 className="card-title">Online Identites</h5>
+                        <h5 className="card-title">Online Image URLs</h5>
                         <div className="row">
                             <div className="col">
 
