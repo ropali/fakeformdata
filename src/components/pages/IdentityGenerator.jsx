@@ -331,7 +331,6 @@ const getLocales = () => {
         "en_US": "English (United States)",
        
         "en": "English",
-        "en_IND": "English (India)",
        
         "fr_CA": "French (Canada)",
         
