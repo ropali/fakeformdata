@@ -11,26 +11,25 @@ export default class ImageGenerator extends Component {
 
     state = {
         url: getImgUrl(),
-        selectedType: 'abstract'
+        selectedType: 'abstract',
+        lastUpdated: Date.now()
     }
 
     onChangeHandler = (e) => {
         var index = e.nativeEvent.target.selectedIndex;
         const type = e.nativeEvent.target[index].text;
 
-        console.log(type);
         this.setState({ url: getImgUrl(type), selectedType: type })
-        
     }
 
     refreshData = () => {
-        
-        this.setState({ url: getImgUrl( this.state.selectedType ) })
+        // This will force Img component to update
+        this.setState({ lastUpdated: Date.now() })
     }
 
     render() {
 
-        const { url } = this.state
+        const { url, lastUpdated } = this.state
 
         return (
 
@@ -53,8 +52,6 @@ export default class ImageGenerator extends Component {
                                     placeholder="Image URL"
                                     label="Image URL"
                                 />
-
-
 
                             </div>
 
@@ -86,7 +83,7 @@ export default class ImageGenerator extends Component {
                         <div className="row">
                             <div className="col">
                                 <Img 
-                                src={url} 
+                                src={ url + '?v=' + lastUpdated } 
                                 alt="" 
                                 width="50%"
                                 loader={ <Preloader/> }
@@ -97,8 +94,6 @@ export default class ImageGenerator extends Component {
                     </div>
                 </div>
             </React.Fragment>
-
-
         )
     }
 }
