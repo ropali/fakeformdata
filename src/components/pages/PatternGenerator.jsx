@@ -74,7 +74,7 @@ export default class NumbersGenerator extends Component {
 
                         <h2 className="card-title">How To Make Certain Character Fixed?</h2>
                         <p>If you want some character in pattern fixed then always use <b>~</b> sign in front of that character</p>
-                        <p>Example : If you want Z at the end of every patter you generate fixed then do this,
+                        <p>Example : If you want Z at the end of every pattern you generate fixed then do this,
                         </p>
                         <p>
                             <b>Input : AAA~Z</b>
