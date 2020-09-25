@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/fakeformdata/static/css/main.e74dffcd.chunk.css",
+    "main.js": "/fakeformdata/static/js/main.b3fdbbeb.chunk.js",
+    "main.js.map": "/fakeformdata/static/js/main.b3fdbbeb.chunk.js.map",
+    "runtime~main.js": "/fakeformdata/static/js/runtime~main.f05f0d53.js",
+    "runtime~main.js.map": "/fakeformdata/static/js/runtime~main.f05f0d53.js.map",
+    "static/js/2.f78f617d.chunk.js": "/fakeformdata/static/js/2.f78f617d.chunk.js",
+    "static/js/2.f78f617d.chunk.js.map": "/fakeformdata/static/js/2.f78f617d.chunk.js.map",
+    "index.html": "/fakeformdata/index.html",
+    "precache-manifest.1f766a2bad046809a4dd2a14043240ad.js": "/fakeformdata/precache-manifest.1f766a2bad046809a4dd2a14043240ad.js",
+    "service-worker.js": "/fakeformdata/service-worker.js",
+    "static/css/main.e74dffcd.chunk.css.map": "/fakeformdata/static/css/main.e74dffcd.chunk.css.map",
+    "static/media/style.css": "/fakeformdata/static/media/themify.e23a7dca.ttf"
+  }
+}
